@@ -18,7 +18,9 @@ export async function generateStaticParams({
 }: {
   params: { id: string };
 }) {
-  const res = await fetch(process.env.API_PATH + "/api/blog/posts");
+  const res = await fetch(process.env.API_PATH + "/api/blog/posts", {
+    next: { revalidate: 0 },
+  });
   const data = await res.json();
 
   return data.data.map((post: any) => {
@@ -29,7 +31,9 @@ export async function generateStaticParams({
 }
 
 export default async function SoloPost({ params }: { params: { id: string } }) {
-  const res = await fetch(process.env.API_PATH + "/api/blog/posts");
+  const res = await fetch(process.env.API_PATH + "/api/blog/posts", {
+    next: { revalidate: 0 },
+  });
   const data = await res.json();
 
   const postList = data.data.map((post: any) => post._id);

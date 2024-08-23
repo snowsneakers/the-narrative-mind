@@ -66,7 +66,12 @@ const LoginForm = () => {
               <FormItem>
                 <FormLabel>Username</FormLabel>
                 <FormControl>
-                  <Input type="text" placeholder="Username" {...field} />
+                  <Input
+                    type="text"
+                    className="text-[1rem]"
+                    placeholder="Username"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -79,7 +84,12 @@ const LoginForm = () => {
               <FormItem>
                 <FormLabel>Password</FormLabel>
                 <FormControl>
-                  <Input type="password" placeholder="Password" {...field} />
+                  <Input
+                    type="password"
+                    className="text-[1rem]"
+                    placeholder="Password"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>

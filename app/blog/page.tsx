@@ -46,7 +46,9 @@ const Hero = () => {
 };
 
 export default async function Blog() {
-  const res = await fetch(process.env.API_PATH + "/api/blog/posts");
+  const res = await fetch(process.env.API_PATH + "/api/blog/posts", {
+    next: { revalidate: 0 },
+  });
   const data = await res.json();
 
   const filtered = data.data.slice(0, 4);

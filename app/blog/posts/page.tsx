@@ -12,7 +12,9 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export default async function BlogPosts() {
-  const res = await fetch(process.env.API_PATH + "/api/blog/posts");
+  const res = await fetch(process.env.API_PATH + "/api/blog/posts", {
+    next: { revalidate: 0 },
+  });
   const data = await res.json();
 
   const firstPage = data.data.slice(0, 5);

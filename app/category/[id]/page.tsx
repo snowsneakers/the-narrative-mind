@@ -12,6 +12,7 @@ import {
 
 import Posts from "@/components/blog/posts";
 import { notFound } from "next/navigation";
+import next from "next";
 
 // export async function generateStaticParams() {
 //   const res = await fetch(process.env.API_PATH + "/api/blog/posts");
@@ -25,9 +26,9 @@ import { notFound } from "next/navigation";
 // }
 
 export async function generateStaticParams() {
-  const posts = await fetch(process.env.API_PATH + "/api/blog/posts").then(
-    (res) => res.json()
-  );
+  const posts = await fetch(process.env.API_PATH + "/api/blog/posts", {
+    next: { revalidate: 0 },
+  }).then((res) => res.json());
 
   return posts.data.map((post: any) => ({
     id: post.category,
@@ -39,7 +40,9 @@ export default async function CategoryPage({
 }: {
   params: { id: string };
 }) {
-  const res = await fetch(process.env.API_PATH + "/api/blog/posts");
+  const res = await fetch(process.env.API_PATH + "/api/blog/posts", {
+    next: { revalidate: 0 },
+  });
   const data = await res.json();
 
   const filtered = data.data.filter(

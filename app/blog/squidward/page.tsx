@@ -27,7 +27,9 @@ import AiModal from "@/components/dashboard/aiModal";
 export default async function Home() {
   const session = await getServerSession(authOptions);
 
-  const res = await fetch(process.env.API_PATH + "/api/blog/posts");
+  const res = await fetch(process.env.API_PATH + "/api/blog/posts", {
+    next: { revalidate: 0 },
+  });
   const data = await res.json();
 
   if (!session) {
