@@ -5,6 +5,8 @@ import { authOptions } from "@/lib/authOptions";
 import dbConnect from "@/lib/mongodb";
 import Post from "@/models/post";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(request: Request) {
   const session = await getServerSession(authOptions);
 
