@@ -30,7 +30,7 @@ export async function generateStaticParams() {
   );
 
   return posts.data.map((post: any) => ({
-    id: post.category.toLowerCase().split(" ").join("-"),
+    id: post.category,
   }));
 }
 
