@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GetStaticProps, GetStaticPaths } from "next";
+
 import { convertToTitleCase } from "@/lib/titlecase";
 import {
   Breadcrumb,
@@ -13,21 +13,14 @@ import {
 import Posts from "@/components/blog/posts";
 import { notFound } from "next/navigation";
 
-export const generateStaticParams: GetStaticPaths = async () => {
+export async function generateStaticParams() {
   const res = await fetch(process.env.API_PATH + "/api/blog/posts");
   const data = await res.json();
 
-  const paths = data.data.map((post: any) => {
-    return {
-      params: { id: post.category.toLowerCase().split(" ").join("-") },
-    };
-  });
-
-  return {
-    paths,
-    fallback: true,
-  };
-};
+  return data.data.map((post: any) => ({
+    id: post.category.toLowerCase().split(" ").join("-"),
+  }));
+}
 
 export default async function CategoryPage({
   params,
