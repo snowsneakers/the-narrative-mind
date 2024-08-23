@@ -13,11 +13,23 @@ import {
 import Posts from "@/components/blog/posts";
 import { notFound } from "next/navigation";
 
-export async function generateStaticParams() {
-  const res = await fetch(process.env.API_PATH + "/api/blog/posts");
-  const data = await res.json();
+// export async function generateStaticParams() {
+//   const res = await fetch(process.env.API_PATH + "/api/blog/posts");
+//   const data = await res.json();
 
-  return data.data.map((post: any) => ({
+//   console.log(data);
+
+//   return data.data.map((post: any) => ({
+//     id: post.category.toLowerCase().split(" ").join("-"),
+//   }));
+// }
+
+export async function generateStaticParams() {
+  const posts = await fetch(process.env.API_PATH + "/api/blog/posts").then(
+    (res) => res.json()
+  );
+
+  return posts.data.map((post: any) => ({
     id: post.category.toLowerCase().split(" ").join("-"),
   }));
 }
