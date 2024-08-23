@@ -10,10 +10,10 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { fetch_data } from "@/lib/fetch";
 
 export default async function BlogPosts() {
-  const data = await fetch_data(process.env.API_PATH + "/api/blog/posts");
+  const res = await fetch(process.env.API_PATH + "/api/blog/posts");
+  const data = await res.json();
 
   const firstPage = data.data.slice(0, 5);
 

@@ -2,7 +2,6 @@ import Link from "next/link";
 
 import Posts from "@/components/blog/posts";
 import { Button } from "@/components/ui/button";
-import { fetch_data } from "@/lib/fetch";
 
 import {
   Breadcrumb,
@@ -47,8 +46,11 @@ const Hero = () => {
 };
 
 export default async function Blog() {
-  const data = await fetch_data(process.env.API_PATH + "/api/blog/posts");
+  const res = await fetch(process.env.API_PATH + "/api/blog/posts");
+  const data = await res.json();
+
   const filtered = data.data.slice(0, 4);
+
   return (
     <div className="space-y-10 pb-10 max-w-[1130px] mx-auto my-10 px-5 font-josefin">
       <Hero />
