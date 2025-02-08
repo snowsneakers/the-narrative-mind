@@ -15,7 +15,7 @@ const Hero = () => {
         <p className="font-josefin font-[300] text-lg text-gray-700">
           Welcome! {"I'm"} Gabriella, a compassionate and experienced narrative
           therapist dedicated to helping you rewrite your life story. Here,
-          you'll find information about my services, payment options, and
+          {"you'll"} find information about my services, payment options, and
           availability. Check out my blog for insights on how narrative therapy
           can transform your journey.
         </p>
