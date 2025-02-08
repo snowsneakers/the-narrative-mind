@@ -13,12 +13,11 @@ const Hero = () => {
           </p>
         </div>
         <p className="font-josefin font-[300] text-lg text-gray-700">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Perspiciatis, illo provident! Quo vel blanditiis sint placeat eum
-          dolorem? Natus dicta reiciendis expedita sit alias, maiores esse eum,
-          nobis incidunt neque odit? Maxime necessitatibus recusandae obcaecati
-          iste exercitationem eveniet perferendis architecto nihil, sequi nulla
-          tempora deserunt, quia iusto natus in voluptate.
+          Welcome! {"I'm"} Gabriella, a compassionate and experienced narrative
+          therapist dedicated to helping you rewrite your life story. Here,
+          you'll find information about my services, payment options, and
+          availability. Check out my blog for insights on how narrative therapy
+          can transform your journey.
         </p>
       </div>
     </section>

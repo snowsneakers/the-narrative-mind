@@ -23,9 +23,9 @@ const IntakeFormsAndSocials = () => {
       >
         <h2 className="text-2xl font-lit font-medium">Intake Forms</h2>
         <p className="text-gray-700">
-          these forms Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Eos doloremque inventore sit totam quidem quibusdam laudantium
-          suscipit nulla voluptas laborum.
+          Before our first session, you may need to complete an intake form to
+          help me better understand your needs and goals. You can find the form
+          below.
         </p>
         <div>
           <ScrollArea className="h-[250px] w-full rounded-md">
@@ -45,10 +45,9 @@ const IntakeFormsAndSocials = () => {
       <div className="space-y-5 rounded-md py-5 bento col-span-2" id="contact">
         <h2 className="text-2xl font-lit font-medium">Contact</h2>
         <p className="text-gray-700">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo pariatur
-          reiciendis delectus mollitia maiores sit repudiandae sunt hic odio
-          quidem beatae dolorem maxime voluptatem, asperiores, dolorum fugit
-          aliquam eius assumenda est! Aspernatur ipsum ab est.
+          Have questions or ready to schedule a session? Feel free to reach out—
+          {"I'd"} love to hear from you. You can contact me using the details
+          below.
         </p>
         <div className="flex flex-wrap items-center gap-5">
           <div>

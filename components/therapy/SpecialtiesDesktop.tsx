@@ -26,8 +26,9 @@ const SpecialtiesDesktop = () => {
     >
       <h2 className="text-2xl font-lit font-medium">Specialties</h2>
       <p className="text-gray-700">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eveniet,
-        cumque expedita placeat quibusdam perferendis.
+        Everyone has a story, and every story deserves to be heard with care and
+        curiosity. Here are the strengths I bring to our work together—guiding
+        you with compassion, collaboration, and respect for your unique journey.
       </p>
       <ul className="flex flex-wrap gap-5">
         {specialties

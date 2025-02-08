@@ -68,11 +68,25 @@ export default async function Blog() {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <Link href="/blog/posts" className="text-sm">
-          All Posts
-        </Link>
+        {filtered == undefined || filtered == null ? null : (
+          <Link href="/blog/posts" className="text-sm">
+            All Posts
+          </Link>
+        )}
       </div>
-      <Posts posts={filtered} />
+      <div>
+        {filtered == undefined || filtered == null ? (
+          <div>
+            <p>Something went wrong. Check back later!</p>
+          </div>
+        ) : filtered.length == 0 ? (
+          <div>
+            <p>No Posts</p>
+          </div>
+        ) : (
+          <Posts posts={filtered} />
+        )}
+      </div>
     </div>
   );
 }

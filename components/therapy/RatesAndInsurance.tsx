@@ -9,8 +9,8 @@ const RatesAndInsurance = () => {
       >
         <h2 className="text-2xl font-lit font-medium">Rates</h2>
         <p className="text-gray-700">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus
-          pariatur quo dignissimos, illo ratione voluptatibus?
+          Below are my session rates. Sliding scale options may be
+          available—feel free to reach out with any questions.
         </p>
         <div className="space-y-5">
           <ul className="grid grid-cols-1 xxxs:grid-cols-2 sm:grid-cols-3 med:grid-cols-2 lg:grid-cols-3 gap-5">

@@ -27,10 +27,11 @@ const QuoteAndCta = () => {
         <div className="space-y-5 break-inside-avoid">
           <h2 className="text-2xl font-lit font-medium">Blog</h2>
           <p className="text-[18px] text-gray-700">
-            Check out my blog. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Dolorum rerum inventore provident consequatur.
-            Voluptatum libero provident minima saepe nemo expedita impedit, id
-            reiciendis necessitatibus natus.
+            Curious about how narrative therapy can help you create positive
+            change? Check out my blog for helpful tips, personal stories, and
+            insights into the transformative power of storytelling in therapy.
+            Start exploring today and take the first step toward rewriting your
+            own narrative!
           </p>
           <div>
             <Link
